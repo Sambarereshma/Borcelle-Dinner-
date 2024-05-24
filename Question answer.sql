@@ -60,7 +60,7 @@ join menu on sales.product_id = menu.product_id
 join members on sales.customer_id = members.customer_id
 where sales.order_date <= members.join_date -1
 group by sales.customer_id ,menu.product_name,sales.order_date 
-select * from sales;
+
 
 8.What is the total items and amount spent for each member before they became a member?
 
