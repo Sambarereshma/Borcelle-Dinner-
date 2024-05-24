@@ -24,18 +24,8 @@ from sales join menu on sales.product_id = menu.product_id
 where sales.order_date = (select min(order_date) from sales where customer_id = sales.customer_id)
 order by sales.product_id 
 
-4.What is the most purchased item on the menu and how many times was it purchased by all customers?
-
-select max(sales.product_id),menu.product_name, from sales 
-join menu on menu.product_id = sales.product_id
-where sales.product_id = (select count(product_id) from sales where product_id = sales.product_id)
-group by menu.product_name
-
-select max(product_id) as Most_purchase_item from sales join 
-sales on sales.product_id = sales.product_id
-where product_id = (select count(product_id) as purchase_count from sales where product_id = 3 )
-join menu on sales.product_id = menu.product_id ;               
-#.right is here#
+4.What is the most purchased item on the menu and how many times was it purchased by all custome
+  
 select count(sales.product_id) as purchase_count,menu.product_name,menu.product_id from sales 
 join menu on menu.product_id = sales.product_id
 group by menu.product_name,menu.product_id,menu.price
