@@ -1,0 +1,7 @@
+There are three tables.
+First table is "Sales" Table, in this table three coloumns, 1.customer_name,2.order_date,3.product_id
+
+Second table is "Menu",in this table three coloumns, 1.product_name,2.product_id,3.price
+
+Third table is "members", in this table two coloumns, 1.Customer_id,2.Join_date
+
